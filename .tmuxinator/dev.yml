@@ -4,7 +4,6 @@ name: dev
 root: .
 socket_name: dev
 pre:
-  - brew services start mysql 2> /dev/null
   - brew services start postgres 2> /dev/null
 
 windows:
@@ -15,4 +14,3 @@ windows:
         - vim
         - clear # useful for shell commands
   - console: bundle exec rails c
-  - remote: ssh simon@mds.mogulview.com

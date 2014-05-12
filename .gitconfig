@@ -1,19 +1,13 @@
 [user]
-	name = Simon van Dyk
-	email = simon.vandyk@gmail.com
+	name = Daniel Smith
+	email = jellymann@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/simon/.gitignore_global
+	excludesfile = /Users/daniel/.gitignore_global
 [merge]
 	tool = opendiff
 [color]
 	ui = auto
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
 	default = simple
 [alias]
