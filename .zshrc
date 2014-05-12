@@ -88,7 +88,7 @@ export KEYTIMEOUT=1
 # rbenv and pyenv
 eval "$(rbenv init -)"
 #eval "$(pyenv init -)"
-eval "$(goenv init -)"
+#eval "$(goenv init -)"
 
 
 ######################################
