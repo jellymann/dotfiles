@@ -6,10 +6,12 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="simon"
 # ZSH_THEME="doubleend"
 # ZSH_THEME="blinks"
 # ZSH_THEME="bira"
+ZSH_THEME="agnoster"
+DEFAULT_USER="daniel"
+export TERM='xterm-256color'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -87,7 +89,7 @@ export KEYTIMEOUT=1
 # rbenv and pyenv
 eval "$(rbenv init -)"
 #eval "$(pyenv init -)"
-eval "$(goenv init -)"
+#eval "$(goenv init -)"
 
 
 ######################################
@@ -108,15 +110,18 @@ alias lsa='ls -lah'
 alias pls='sudo'
 alias please='sudo'
 alias touche='touch'
+alias gut='git'
 
 # dev aliases
 alias b='bundle'
+alias be='bundle exec'
 alias z='zeus'
 alias zr='zeus rake'
 alias zs='zeus server'
 alias zc='zeus console'
 alias zd='zeus dbconsole'
 alias gblame='git blame'
+alias wtf='git blame'
 alias gg='git add -A .; git commit -m'
 alias rk='bundle exec rake'
 
@@ -135,18 +140,18 @@ alias msstop='brew services stop mysql'
 alias msrestart='brew services restart mysql'
 
 # project aliases
-ereadz_domain='mogulview.com'
-ssh_client='ssh'
-user_name='simon'
-ip_partial='176.9.70'
-alias production="$ssh_client $user_name@mds.$ereadz_domain"
-alias staging="$ssh_client $user_name@staging.$ereadz_domain"
-alias development="$ssh_client $user_name@development.$ereadz_domain"
-alias upgrade="$ssh_client $user_name@$ip_partial.209"
+#ereadz_domain='mogulview.com'
+#ssh_client='ssh'
+#user_name='simon'
+#ip_partial='176.9.70'
+#alias production="$ssh_client $user_name@mds.$ereadz_domain"
+#alias staging="$ssh_client $user_name@staging.$ereadz_domain"
+#alias development="$ssh_client $user_name@development.$ereadz_domain"
+#alias upgrade="$ssh_client $user_name@$ip_partial.209"
 
-alias productionip="$ssh_client $user_name@$ip_partial.210"
-alias stagingip="$ssh_client $user_name@$ip_partial.210"
-alias developmentip="$ssh_client $user_name@$ip_partial.209"
+#alias productionip="$ssh_client $user_name@$ip_partial.210"
+#alias stagingip="$ssh_client $user_name@$ip_partial.210"
+#alias developmentip="$ssh_client $user_name@$ip_partial.209"
 
 # command aggregation aliases
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -197,10 +202,10 @@ export ADMIN_PASSWORD="password123"
 
 # env variables
 export NODE_PATH=/usr/local/lib/node
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG=en_US.utf8
+export LC_ALL=en_US.utf8
 export GOPATH="$HOME/.goenv/bin"
 export NARWHAL_ENGINE=jsc
 export CAPP_BUILD=$HOME/.cappbuild
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
