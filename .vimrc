@@ -38,9 +38,6 @@ Plugin 'ddollar/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 " Awesome directory listings (try <leader>n )
 Plugin 'scrooloose/nerdtree'
-" Awesome status line
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'stephenmckinney/vim-solarized-powerline'
 " Provides nerdtree toggle function (mapped to <leader>n)
 Plugin 'jistr/vim-nerdtree-tabs'
 " Sublime Text style multiple cursors (put cursor on a word, then hit C-n)
@@ -67,7 +64,7 @@ Plugin 'flazz/vim-colorschemes'
 "
 " Change to airline in favour of powerline
 " Plugin 'Lokaltog/vim-powerline'
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 "
 " Match more than chars with %, match words etc
 " Plugin 'jwhitley/vim-matchit'
@@ -91,11 +88,7 @@ filetype plugin indent on    " required
 " VARIABLES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","
-" Fancy status line delimeters (block arrow thing)
-let g:Powerline_theme='long'
-let g:Powerline_colorscheme='solarized256_dark'
-" let g:Powerline_symbols = 'fancy'
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 let g:ctrlp_max_height = 25
 let g:syntastic_check_on_open=1
 let delimitMate_expand_cr = 1

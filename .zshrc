@@ -11,6 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="bira"
 ZSH_THEME="agnoster"
 DEFAULT_USER="daniel"
+export TERM='xterm-256color'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -201,10 +202,10 @@ export ADMIN_PASSWORD="password123"
 
 # env variables
 export NODE_PATH=/usr/local/lib/node
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG=en_US.utf8
+export LC_ALL=en_US.utf8
 export GOPATH="$HOME/.goenv/bin"
 export NARWHAL_ENGINE=jsc
 export CAPP_BUILD=$HOME/.cappbuild
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
