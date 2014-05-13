@@ -1,7 +1,7 @@
 #!/bin/sh
 
-DOTFILES="gitconfig gitignore_global tmux tmux.conf tmuxinator vim vimrc zshrc"
+DOTFILES="gitconfig gitignore_global tmux tmux.conf tmuxinator vimrc zshrc"
 
 for f in $DOTFILES; do
-  cp -r "$HOME/dotfiles/.$f" "$HOME/.$f"
+  ln -s "$HOME/dotfiles/.$f" "$HOME/.$f"
 done
