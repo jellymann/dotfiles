@@ -1,82 +1,90 @@
+set nocompatible
+filetype off
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
 " Silver searcher in ctrl-p
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 " Ruby editing niceties (c-x c-o to show methods)
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 " Rails navigation and much more (:A and :R, also try :Emodel name!)
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 " Git wrapper for vim (try :Gblame)
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " Change surrounding chars (try cs\"' inside braces - remove the \ )
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 " Helper to end control structures automatically (ruby, bash, VS, C/C++ etc)
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 " Run specs from vim
-Bundle 'thoughtbot/vim-rspec'
+Plugin 'thoughtbot/vim-rspec'
 " Autoclosing of quotes, parentheses, brackets etc
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 " Fuzzy search of all files in directory
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 " Slim template highlighting
-Bundle 'slim-template/vim-slim'
+Plugin 'slim-template/vim-slim'
 " Begins tab completion with a single <tab> instead of c-x c-o
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 " CS syntax, indenting, compling etc
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 " Easy multi line commenting (try <leader>ci )
-Bundle 'ddollar/nerdcommenter'
+Plugin 'ddollar/nerdcommenter'
 " Preemptive syntax checking for multiple languages
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Awesome directory listings (try <leader>n )
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " Awesome status line
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'stephenmckinney/vim-solarized-powerline'
 " Provides nerdtree toggle function (mapped to <leader>n)
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
 " Sublime Text style multiple cursors (put cursor on a word, then hit C-n)
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 " Record result of every line of code & replay inline (<leader>m & <leader>r)
-Bundle 't9md/vim-ruby-xmpfilter'
+Plugin 't9md/vim-ruby-xmpfilter'
 " Unobtrusiver highlighting of trailing whitespaces (:Trim)
-Bundle 'csexton/trailertrash.vim'
+Plugin 'csexton/trailertrash.vim'
 " User defined text-objects
-Bundle 'textobj-user'
+Plugin 'textobj-user'
 " Handy ruby block selectors (try var and vir for 'around' and 'inside')
-Bundle 'textobj-rubyblock'
+Plugin 'textobj-rubyblock'
 " Easy pane navigation between vim and tmux
-"Bundle 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 " Great collection of colour schemes for vim
-Bundle 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 
 
 " Easy navigation to selections
-" Bundle 'Lokaltog/vim-easymotion'
+" Plugin 'Lokaltog/vim-easymotion'
 "
 " Send a buffer to tmux
-" Bundle 'jgdavey/tslime.vim'
+" Plugin 'jgdavey/tslime.vim'
 "
 " Change to airline in favour of powerline
-" Bundle 'Lokaltog/vim-powerline'
-" Bundle 'bling/vim-airline'
+" Plugin 'Lokaltog/vim-powerline'
+" Plugin 'bling/vim-airline'
 "
 " Match more than chars with %, match words etc
-" Bundle 'jwhitley/vim-matchit'
+" Plugin 'jwhitley/vim-matchit'
 "
 " Defines a new text object representing lines of code at the same indent level
-" Bundle 'michaeljsmith/vim-indent-object'
+" Plugin 'michaeljsmith/vim-indent-object'
 "
-" Bundle 'ecomba/vim-ruby-refactoring'
-" Bundle 'guns/vim-clojure-static'
-" Bundle 'jnwhiteh/vim-golang'
-" Bundle 'adamlowe/vim-slurper'
-" Bundle 'FredKSchott/CoVim'
-" Bundle 'godlygeek/tabular'
+" Plugin 'ecomba/vim-ruby-refactoring'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'jnwhiteh/vim-golang'
+" Plugin 'adamlowe/vim-slurper'
+" Plugin 'FredKSchott/CoVim'
+" Plugin 'godlygeek/tabular'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -85,7 +93,7 @@ Bundle 'flazz/vim-colorschemes'
 let mapleader=","
 " Fancy status line delimeters (block arrow thing)
 let g:Powerline_theme='long'
-let g:Powerline_colorscheme='solarized'
+let g:Powerline_colorscheme='solarized256_dark'
 " let g:Powerline_symbols = 'fancy'
 " let g:airline_powerline_fonts = 1
 let g:ctrlp_max_height = 25
@@ -130,8 +138,8 @@ filetype plugin indent on
 syntax on
 " Enable support for 256 colours
 set t_Co=256
-" Set solarized light by changing background
-set background=light
+" Set solarized light/dark by changing background
+set background=dark
 " Set solarized colour scheme
 colorscheme solarized
 " Set font & size in gui vim (macvim in this case)
