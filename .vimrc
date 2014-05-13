@@ -1,3 +1,6 @@
+set nocompatible
+filetype off
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -37,6 +40,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 " Awesome status line
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'stephenmckinney/vim-solarized-powerline'
 " Provides nerdtree toggle function (mapped to <leader>n)
 Plugin 'jistr/vim-nerdtree-tabs'
 " Sublime Text style multiple cursors (put cursor on a word, then hit C-n)
@@ -78,6 +82,10 @@ Plugin 'flazz/vim-colorschemes'
 " Plugin 'FredKSchott/CoVim'
 " Plugin 'godlygeek/tabular'
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VARIABLES
@@ -85,7 +93,7 @@ Plugin 'flazz/vim-colorschemes'
 let mapleader=","
 " Fancy status line delimeters (block arrow thing)
 let g:Powerline_theme='long'
-let g:Powerline_colorscheme='solarized'
+let g:Powerline_colorscheme='solarized256_dark'
 " let g:Powerline_symbols = 'fancy'
 " let g:airline_powerline_fonts = 1
 let g:ctrlp_max_height = 25
@@ -130,8 +138,8 @@ filetype plugin indent on
 syntax on
 " Enable support for 256 colours
 set t_Co=256
-" Set solarized light by changing background
-set background=light
+" Set solarized light/dark by changing background
+set background=dark
 " Set solarized colour scheme
 colorscheme solarized
 " Set font & size in gui vim (macvim in this case)
