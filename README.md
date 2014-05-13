@@ -1,3 +1,5 @@
+All kudos to Simon and Kevin for all of this awesomeness.
+
 # Dotfiles
 My environment configuration files for shell, tmux and vim.
 I work in OS X so I can't guarantee this will work on other *nix derivatives.
