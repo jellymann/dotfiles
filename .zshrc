@@ -9,8 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="doubleend"
 # ZSH_THEME="blinks"
 # ZSH_THEME="bira"
-ZSH_THEME="agnoster"
-DEFAULT_USER="daniel"
+ZSH_THEME="pure"
 export TERM='xterm-256color'
 
 # Set to this to use case-sensitive completion
@@ -111,6 +110,7 @@ alias pls='sudo'
 alias please='sudo'
 alias touche='touch'
 alias gut='git'
+alias bru='brew'
 
 # dev aliases
 alias b='bundle'

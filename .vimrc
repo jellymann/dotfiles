@@ -222,7 +222,7 @@ noremap <right> <nop>
 map <leader>. :noh<cr>
 " Delete current line, move up a line, insert newline in insert mode
 nmap <leader>o ddko
-" Toggle nerd tree
+"a Toggle nerd tree
 map <leader>n :NERDTreeTabsToggle<cr>
 " Close current buffer
 map <leader>bd :bd!<cr>
