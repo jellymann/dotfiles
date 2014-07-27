@@ -70,7 +70,7 @@ Plugin 'bling/vim-airline'
 " Plugin 'jwhitley/vim-matchit'
 "
 " Defines a new text object representing lines of code at the same indent level
-" Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'michaeljsmith/vim-indent-object'
 "
 " Plugin 'ecomba/vim-ruby-refactoring'
 " Plugin 'guns/vim-clojure-static'
