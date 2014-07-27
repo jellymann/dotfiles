@@ -5,10 +5,6 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="doubleend"
-# ZSH_THEME="blinks"
-# ZSH_THEME="bira"
 ZSH_THEME="pure"
 export TERM='xterm-256color'
 
@@ -202,10 +198,9 @@ export ADMIN_PASSWORD="password123"
 
 # env variables
 export NODE_PATH=/usr/local/lib/node
-export LANG=en_US.utf8
-export LC_ALL=en_US.utf8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export GOPATH="$HOME/.goenv/bin"
 export NARWHAL_ENGINE=jsc
 export CAPP_BUILD=$HOME/.cappbuild
 #export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
