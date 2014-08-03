@@ -79,6 +79,8 @@ Plugin 'michaeljsmith/vim-indent-object'
 " Plugin 'FredKSchott/CoVim'
 " Plugin 'godlygeek/tabular'
 
+Plugin 'tikhomirov/vim-glsl'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -91,6 +93,7 @@ let mapleader=","
 let g:airline_powerline_fonts = 1
 let g:ctrlp_max_height = 25
 let g:syntastic_check_on_open=1
+let b:syntastic_cpp_cflags='-std=c++11'
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 let NERDTreeShowHidden=1
