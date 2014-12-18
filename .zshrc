@@ -81,11 +81,6 @@ export KEYTIMEOUT=1
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# rbenv and pyenv
-eval "$(rbenv init -)"
-#eval "$(pyenv init -)"
-#eval "$(goenv init -)"
-
 
 ######################################
 ### ALIASES
@@ -104,6 +99,7 @@ alias ls='ls -CFG'
 alias lsa='ls -lah'
 alias pls='sudo'
 alias please='sudo'
+alias cmod='sudo'
 alias touche='touch'
 alias gut='git'
 alias bru='brew'
@@ -119,6 +115,8 @@ alias zd='zeus dbconsole'
 alias gblame='git blame'
 alias wtf='git blame'
 alias gg='git add -A .; git commit -m'
+alias ggm='git add -A .; git commit'
+alias gf='git fetch'
 alias rk='bundle exec rake'
 
 # tmux aliases
@@ -204,3 +202,16 @@ export GOPATH="$HOME/.goenv/bin"
 export NARWHAL_ENGINE=jsc
 export CAPP_BUILD=$HOME/.cappbuild
 #export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/23.0.2
+export PATH=$PATH:/usr/local/Cellar/android-sdk/23.0.2/bin
+
+## For MacTeX
+eval `/usr/libexec/path_helper -s`
+
+# rbenv and pyenv
+eval "$(rbenv init -)"
+#eval "$(pyenv init -)"
+#eval "$(goenv init -)"
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"

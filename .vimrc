@@ -8,10 +8,14 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'gmarik/vundle'
 
+" Silver searcher
+Plugin 'ggreer/the_silver_searcher'
 " Silver searcher in ctrl-p
 Plugin 'rking/ag.vim'
 " Ruby editing niceties (c-x c-o to show methods)
 Plugin 'vim-ruby/vim-ruby'
+" Jade template engine syntax highlighting and indentation
+Plugin 'digitaltoad/vim-jade'
 " Rails navigation and much more (:A and :R, also try :Emodel name!)
 Plugin 'tpope/vim-rails'
 " Git wrapper for vim (try :Gblame)
@@ -89,11 +93,13 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VARIABLES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader=","
+let mapleader=" "
 let g:airline_powerline_fonts = 1
 let g:ctrlp_max_height = 25
 let g:syntastic_check_on_open=1
 let b:syntastic_cpp_cflags='-std=c++11'
+let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
+let g:syntastic_coffee_coffeelint_args = "--csv --file /Users/daniel/.coffeelint.json"
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 let NERDTreeShowHidden=1
@@ -137,7 +143,7 @@ set t_Co=256
 " Set solarized light/dark by changing background
 set background=dark
 " Set solarized colour scheme
-colorscheme solarized
+colorscheme grb256
 " Set font & size in gui vim (macvim in this case)
 if has('gui_running')
   if has('gui_macvim')
@@ -337,6 +343,9 @@ if has("autocmd")
 
   " Never wrap slim files
   autocmd FileType slim setlocal textwidth=0
+
+  " Makefiles use tabs, dammit!
+  autocmd FileType make setlocal noexpandtab
 
   autocmd BufWritePre * :%s/\s\+$//e
 
