@@ -8,6 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="pure"
 export TERM='xterm-256color'
 
+export DYLD_LIBRARY_PATH='/opt/oracle/instantclient_11_2'
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -120,18 +122,15 @@ alias gf='git fetch'
 alias rk='bundle exec rake'
 
 # tmux aliases
+alias t='tmux'
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
 alias tm='tmux show-messages'
 
 # db aliases
-alias pgstart='brew services start postgres'
-alias pgstop='brew services stop postgres'
-alias pgrestart='brew services restart postgres'
-alias msstart='brew services start mysql'
-alias msstop='brew services stop mysql'
-alias msrestart='brew services restart mysql'
+alias startmysql="mysql.server start"
+alias stopmysql="mysql.server stop"
 
 # project aliases
 #ereadz_domain='mogulview.com'
@@ -186,6 +185,32 @@ function gprl {
   open "https://github.com/$repo/pulls"
 }
 
+# crude "bundle exec" for node
+ne() { $(npm bin)/$*; }
+
+# git emoji
+
+gcma()  { git commit -m ":star2: $*";  }        # add
+gcmr()  { git commit -m ":scissors: $*";  }     # remove
+gcmc()  { git commit -m ":hammer: $*";  }       # chore
+gcmf()  { git commit -m ":wrench: $*";  }       # fix
+gcmhf() { git commit -m ":fire: $*";  }         # hotfix
+gcmrl() { git commit -m ":rocket: $*";  }       # release
+gcmrf() { git commit -m ":nut_and_bolt: $*";  } # refactor
+gcmw()  { git commit -m ":hourglass: $*";  }    # wip
+
+# git emoji help
+function gcmh {
+  echo "gcma :star2:  add"
+  echo "gcmr :scissors:  remove"
+  echo "gcmc :hammer:  chore"
+  echo "gcmf :wrench:  fix"
+  echo "gcmhf :fire:  hotfix"
+  echo "gcmrl :rocket:  release"
+  echo "gcmrf :nut_and_bolt:  refactor"
+  echo "gcmw :hourglass:  wip"
+}
+
 ######################################
 ### ENVIRONMENT
 
@@ -202,8 +227,7 @@ export GOPATH="$HOME/.goenv/bin"
 export NARWHAL_ENGINE=jsc
 export CAPP_BUILD=$HOME/.cappbuild
 #export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/23.0.2
-export PATH=$PATH:/usr/local/Cellar/android-sdk/23.0.2/bin
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.0.2
 
 ## For MacTeX
 eval `/usr/libexec/path_helper -s`

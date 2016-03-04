@@ -85,10 +85,11 @@ Plugin 'michaeljsmith/vim-indent-object'
 
 Plugin 'tikhomirov/vim-glsl'
 
+Plugin 'gorodinskiy/vim-coloresque'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VARIABLES
@@ -96,10 +97,17 @@ filetype plugin indent on    " required
 let mapleader=" "
 let g:airline_powerline_fonts = 1
 let g:ctrlp_max_height = 25
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open=1
+let g:syntastic_mode_map = {
+        \ "mode": "active",
+        \ "active_filetypes": ["ruby", "javascript"],
+        \ "passive_filetypes": ["cpp", "java"] }
 let b:syntastic_cpp_cflags='-std=c++11'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_coffee_coffeelint_args = "--csv --file /Users/daniel/.coffeelint.json"
+let g:syntastic_javascript_checkers = ['eslint']
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 let NERDTreeShowHidden=1
